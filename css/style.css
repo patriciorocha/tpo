@@ -54,17 +54,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .header {
-    height: 50vh !important;
+    height: 50vh ;
     background: url(./../images/background_IOT.png) no-repeat center;
     background-size: cover;
     background-color: rgba(19, 20, 20, 0.7);
     background-blend-mode: soft-light;
 }
-
+  
 .bg-arduino {
     display: flex;
     justify-content: center;
@@ -73,7 +72,7 @@ body {
 }
 
 .bg-arduino {
-    height: 50vh !important;
+    height: 50vh ;
     background: url(./../images/bg_arduino.jpg) no-repeat center;
     background-size: cover;
     background-color: rgba(19, 20, 20, 0.9);
@@ -88,11 +87,49 @@ body {
 }
 
 .bg-raspberry {
-    height: 50vh !important;
+    height: 50vh ;
     background: url(./../images/bg_raspberry_pi.jpg) no-repeat center;
     background-size: cover;
     background-color: rgba(19, 20, 20, 0.8);
     background-blend-mode: soft-light;
+}
+
+.bg-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-contacto {
+    height: 50vh ;
+    background: url(./../images/bg_contacto.jpg) no-repeat center;
+    background-size: cover;
+    background-color: rgba(19, 20, 20, 0.8);
+    background-blend-mode: soft-light;
+}
+
+.bg-iot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-iot {
+    height: 50vh ;
+    background: url(./../images/bg_iot.jpg) no-repeat center;
+    background-size: cover;
+    background-color: rgba(19, 20, 20, 0.4);
+    background-blend-mode: soft-light;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 20px;
+    line-height: 36px;
+    text-align: left;
+    
 }
 
 .title {
@@ -113,6 +150,7 @@ p {
 .btn {
     display: inline-block;
     margin-top: 15px;
+    margin-bottom: 15px;
     padding: 10px 30px;
     border: 2px solid #9c27b0;
     color: #fff;
@@ -142,7 +180,7 @@ p {
 }
 
 .background {
-    padding: 30px;
+    padding: 40px;
     background: #1f1d1d
 }
 
@@ -164,6 +202,7 @@ p {
     margin: 2rem;   
 }
 
+/* En esta clase decidi colocar la animación como variació de fondo de color en los iconos de Arduino y Raspberry Pi */
 .box-container .box i {
     height: 3rem;
     width: 3rem;
@@ -174,13 +213,20 @@ p {
     background: #9c27b0;
     font-size: 2rem;
     margin: 1rem 0;
+    animation-name: example;
+    animation-duration: 8s;
+}
 
+@keyframes example {
+    0%   {background-color: #f9d4ff;}
+    25%  {background-color: #c479d1;}
+    50%  {background-color: #6e287a;}
+    100% {background-color: #290030;}
 }
 
 .box-container .box h3 {
     font-size: 20px;
     color: #9c27b0;
-
 }
 
 .box-container .box p {
@@ -190,13 +236,6 @@ p {
 
 .about {
     background: #171717;
-}
-
-.price {
-    background: url(img/costos.jpg) no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
-    text-align: center;
 }
 
 .contact {
@@ -224,8 +263,10 @@ footer span {
 @media (max-width: 768px) {
     .title {
         margin-bottom: 0;
-        font-size: 20px;
+        font-size: 18px;
         margin-top: 15%;
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 
     p {
@@ -234,11 +275,27 @@ footer span {
         padding-left: 5%;
     }
 
-    .background {
-        height: 100vh;
+    .navbar a {
+        display: block;
+        padding: 8px 8px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    
+    .navbar a:hover {
+        background: #3f3f3f;
     }
 
-    .navbar {
-        display: none;
+    .content {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header {
+        height: 70vh;
     }
 }
